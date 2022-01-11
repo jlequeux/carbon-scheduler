@@ -27,7 +27,7 @@ def func(message):
     print(message)
     
 scheduler = carbon_scheduler.Scheduler()
-scheduler.add_job(func, ['hello its been 15min]).every('15min').when_carbon_impact_in('FR').is_lt(23)
+scheduler.add_job(func, ['hello its been 15min']).every('15min').when_carbon_impact_in('FR').is_lt(23)
 scheduler.add_job(func, ['hello its been 2days']).every('2d').when_carbon_impact_in('DE').in_quantile(0.2)
 
 scheduler.run()
